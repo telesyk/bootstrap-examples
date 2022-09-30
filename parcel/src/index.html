@@ -8,63 +8,109 @@
     <script type="module" src="js/main.js"></script>
   </head>
   <body>
-    <div class="container py-4 px-3 mx-auto">
-      <header class="d-flex justify-content-between align-items-md-center pb-3 mb-5 border-bottom">
-        <h1 class="h4">
-          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <img class="d-inline-block me-2" width="40" height="32" src="https://raw.githubusercontent.com/twbs/bootstrap/main/site/static/docs/5.2/assets/brand/bootstrap-logo-black.svg" alt="Bootstrap">
-            <span>Parcel</span>
-          </a>
-        </h1>
-        <a href="https://github.com/twbs/examples/tree/main/parcel/" target="_blank" rel="noopener">View on GitHub</a>
-      </header>
-
-      <h1>Build Bootstrap with Parcel</h1>
-      <div class="col-lg-8 px-0">
-        <p class="fs-4">You've successfully loaded the Bootstrap + Parcel example! It's loaded up with <a href="https://getbootstrap.com/">Bootstrap 5</a> and uses Parcel to compile and bundle our Sass and JavaScript.</p>
-        <p>If this button appears blue and the link appears purple, you've done it!</p>
-      </div>
-
-      <button type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
-      <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover" title="Custom popover" data-bs-content="This is a Bootstrap popover.">Example popover</a>
-
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-          </div>
-          <div class="dropdown mt-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-              Dropdown button
+    <div class="page">
+      <header class="page__header py-4 border-bottom bg-light">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img class="d-inline-block me-2" width="40" height="32" src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Bootstrap">
+              <span>Parcel</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header><!-- end header -->
+
+      <main class="page__main">
+        <section class="page__section py-5 bg-dark text-light">
+          <div class="container py-5">
+            <h1>Build Bootstrap with Parcel</h1>
+            <div class="col-lg-8 px-0">
+              <p class="fs-4">You've successfully loaded the Bootstrap + Parcel example! It's loaded up with <a href="https://getbootstrap.com/">Bootstrap 5</a> and uses Parcel to compile and bundle our Sass and JavaScript.</p>
+              <p>If this button appears blue and the link appears purple, you've done it!</p>
+            </div>
+      
+            <button type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
+            <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover" title="Custom popover" data-bs-content="This is a Bootstrap popover.">Example popover</a>
+      
+            <div class="offcanvas offcanvas-end text-dark" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div>
+                  Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                </div>
+                <div class="dropdown mt-3">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                    Dropdown button
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__section py-5">
+          <div class="container py-4">
+            <h2>Guides</h2>
+            <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
+            <ul class="icon-list">
+              <li><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap quick start guide</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.2/getting-started/webpack/">Bootstrap Webpack guide</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.2/getting-started/parcel/">Bootstrap Parcel guide</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.2/getting-started/vite/">Bootstrap Vite guide</a></li>
+              <li><a href="https://getbootstrap.com/docs/5.2/getting-started/build-tools/">Contributing to Bootstrap</a></li>
             </ul>
           </div>
+        </section>
+      </main><!-- end main -->
+
+      <footer class="page__footer border-top bg-light">
+        <div class="container py-4">
+          <div class="icon">
+            <i class="bi bi-arrow-through-heart-fill"></i>
+            <i class="bi bi-toggles"></i>
+            <i class="bi bi-shop"></i>
+          </div>
+          <p class="text-muted">Created and open sourced by the Bootstrap team. Licensed MIT.</p>
         </div>
-      </div>
-
-      <hr class="col-1 my-5 mx-0">
-
-      <h2>Guides</h2>
-      <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
-      <ul class="icon-list">
-        <li><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">Bootstrap quick start guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.2/getting-started/webpack/">Bootstrap Webpack guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.2/getting-started/parcel/">Bootstrap Parcel guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.2/getting-started/vite/">Bootstrap Vite guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.2/getting-started/build-tools/">Contributing to Bootstrap</a></li>
-      </ul>
-
-      <hr class="mt-5 mb-4">
-
-      <p class="text-muted">Created and open sourced by the Bootstrap team. Licensed MIT.</p>
+      </footer><!-- end footer -->
     </div>
   </body>
 </html>
